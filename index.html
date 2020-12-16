@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+    <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- bootstrap -->
+</head>
+<body>
+    <div class="titulo">  
+         <h1>Seminario de Programación EQUIPO 1</h1> 
+    </div>
+    <div id="contenedor">
+        
+        <div id="fila">
+        
+        <div id="columna1">
+            <div align="center"> 
+            <img src="Univ.PNG"ALIGN=CENTER WIDTH=120 HEIGHT=90> </div>
+            <button type="button" class="btn btn-info" onclick="oper1(1)">Mapa Georeferenciado</button>
+            <button type="button" class="btn btn-primary" onclick="oper1(2)">Agrupación especialidad</button>
+            <button type="button" class="btn btn-danger" onclick="oper1(3)">Mapas sexo incidencias</button>
+            <button type="button" class="btn btn-warning" onclick="oper1(4)">Cubos</button>
+            <button type="button" class="btn btn-success" onclick="oper1(5)">Segmentación sexo</button> 
+            <img src="IMG.PNG"ALIGN=MIDDLE WIDTH=250 HEIGHT=200>  
+            
+        </div>
+        <div id="columna2">
+            Representación Gráfica de datos
+        </div>
+        </div>
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- bootstrap -->
+</body>
+</html>
+
+
+<script>
+    function oper1(num) {
+        if (num==1){
+            $val="mapa1.html";
+        }
+        if (num==2){
+            $val="jupyter-2box.html";
+        }
+        if (num==3){
+            $val="indexmap.html";
+        }
+        if (num==4){
+            $val="grafico4.html";
+        }
+        if (num==5){
+            $val="grafico5.html";
+        }
+        $x=document.getElementById("columna2");
+        $x.innerHTML=("<iframe id='columna3' src="+$val+"></iframe>");
+    }
+
+
+</script>
+
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+html{
+    min-height: 100%;
+    position: relative;
+}
+body{
+    background: linear-gradient(100deg, #F4F1BB,#FF637D);
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.titulo,h3{
+    text-align: center;
+}
+
+#contenedor {
+    display: table;
+    }
+#fila {
+    display: table-row;
+       
+}
+#columna1, #columna2 {
+    display:table-cell;
+    padding: 5px;
+    
+}
+#columna1{
+    width: 25%;
+    background-color: white;
+    position: absolute;
+    height: 85vh;
+}
+#columna2{
+    width: 74%;
+    background-color: red;
+    right: 5px;
+    position: absolute;
+    height: 85%;
+}
+
+.btn{
+    width: 100%;
+    height: 10%;
+    font-size: large;
+    margin-top: 10px;
+}
+#columna3{
+    width: 99%;
+position: absolute;
+height: 98%;
+background-color: white;
+}
+</style>
